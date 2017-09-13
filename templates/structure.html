@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>InvEnt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body background="https://source.unsplash.com/collection/1044082/1600x900">
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-header main">
+                <div>
+                    <img src="static/images/logo1.jpeg" align="left" class="image">
+                    <a class="navbar-brand" id="head-banner" href="/">
+                        <h1 class="comp">InvEnt</h1>
+                        <h5 class="comp">Connecting Investors and Entrepreneurs</h5>
+                    </a>
+                </div>
+                {% block header %}
+                    <p>This is header content</p>
+                {% endblock %}
+                <br>
+                <ul class="nav">
+                    <li class="active"><a class="scrollable" href="/" style="margin-left: 5px;">Home</a></li>
+                    <li class=""><a class="scrollable" href="/about">About</a></li>
+                    <li class=""><a class="scrollable" href="/investors">Investors</a></li>
+                    <li class=""><a class="scrollable" href="/entrepreneurs">Entrepreneurs</a></li>
+                    <li class=""><a class="scrollable" href="/faq">FAQ</a></li>
+                    <li class=""><a class="scrollable" href="/contact" style="border-right: none;">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <br><br><br><br><br><br>
+
+    <div>
+        {% block invent %}
+            <p>Let's get connected!</p>
+        {% endblock %}
+    </div>
+
+</body>
+
+    <footer style="color: #333399; background-color: rgba(255, 255, 255, 0.5);">
+        <span>&copy; 2017. Copyright. InvEnt Corporation Ltd. Created by Akanksha.</span>
+    </footer>
+
+</html>

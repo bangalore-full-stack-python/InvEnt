@@ -1,0 +1,62 @@
+{% extends "structure.html" %}
+{% block header %}
+<div class="container">
+    <p class="navbar-text navbar-right"><a href="/" id="welcome">Sign in</a></p>
+</div>
+{% endblock %}
+
+{% block invent %}
+<br><h2 class="heading">Contact Us</h2>
+<div class="contact-page" style="float : right; margin-top: 20px; width : 400px; margin-right : 100px">
+ <form action="mailto:aki.a2907@gmail.com" method="post" enctype="text/plain" id="contactForm" novalidate>
+      <div class="form-item">
+          <input id="name" type="text" placeholder="Name" required="" class="form-control"><br>
+        </div>
+        <div class="form-item">
+          <input id="email" type="email" placeholder="Email Address" required="" class="form-control"><br>
+        </div>
+        <div class="form-item">
+          <input id="phone" type="tel" placeholder="Phone Number" required="" class="form-control"><br>
+        </div>
+        <div class="form-item">
+          <textarea id="message" rows="5" placeholder="Message" required="" class="form-control"></textarea>
+        </div>
+        <br>
+        <button type="submit">Send</button><br><br>
+      <div>
+        <p>Looking forward to answering your email.</p>
+      </div>
+  </form>
+<hr>
+
+<div id="map" style="width:400px; height:400px;"></div>
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(12.9562114, 77.6387957);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 18};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClymeow32Q0nAMiZ9bk1mjeFo2LX32Iuc&amp;callback=myMap" type="text/javascript"></script>
+
+<h5>Cell: 123-456-7890</h5>
+<h5>Email: aki.a2907@gmail.com</h5>
+</div>
+
+<div style="margin-left: 15px;">
+	<img src="https://source.unsplash.com/collection/1047109/480x270">
+	<br><br>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      	<a href="https://www.facebook.com" target="_blank" class="fa fa-facebook-official fa-3x fa-spin" style="margin-left: 30px; color: white"></a>
+      	<a href="https://www.twitter.com" target="_blank" class="fa fa-twitter-square fa-3x fa-spin" style="margin-left: 30px; color: white"></a>
+      	<a href="https://plus.google.com/" target="_blank" class="fa fa-google-plus-official fa-3x fa-spin" style="margin-left: 30px; color: white"></a>
+      	<a href="https://www.linkedin.com" target="_blank" class="fa fa-linkedin-square fa-3x fa-spin" style="margin-left: 30px; color: white"></a>
+      	<a href="https://www.instagram.com" target="_blank" class="fa fa-instagram fa-3x fa-spin" style="margin-left: 30px; color: white"></a>
+      	<a href="https://www.pinterest.com" target="_blank" class="fa fa-pinterest-square fa-3x fa-spin" style="margin-left: 30px; color: white"></a>
+</div>
+{% endblock %}

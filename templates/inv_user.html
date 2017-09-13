@@ -1,0 +1,28 @@
+{% extends "structure.html" %}
+{% block header %}
+<div class="container">
+    <p class="navbar-text navbar-right" id="welcome">Welcome <b>{{ firstname }}</b> <a href="/" id="log">Logout</a></p>
+</div>
+{% endblock %}
+
+{% block invent %}
+<div class="inv-dash">
+	<h4 class="dash-info">Name<hr><p class="dash-sec">{{ firstname }} {{ lastname }}</p></h4><br>
+	<h4 class="dash-info">Company Name<hr><p class="dash-sec">{{ comp_name }}</p></h4>
+</div>
+
+<div class="inv-page">
+	<h2 class="dash">{{ firstname }}'s Dashboard</h2>
+	<h3>Entrepreneur's Pitch Messages</h3>
+
+	{% for i in ent_pitch %}
+	<div class="dash-data">
+		<p style="padding: 5px;">		
+			{{ i }}
+
+		<a href="/ent_user" style="color: #fff"><button type="submit" class="btn btn-success bid">More</button></a></p>
+	</div>
+	<br><br>
+	{% endfor %}
+</div>
+{% endblock %}

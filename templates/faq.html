@@ -1,0 +1,53 @@
+{% extends "structure.html" %}
+{% block header %}
+<div class="container">
+    <p class="navbar-text navbar-right"><a href="/" id="welcome">Sign in</a></p>
+</div>
+{% endblock %}
+
+{% block invent %}
+<br><br><h2 class="heading">FAQ</h2>
+<div class="faq">
+	<button class="accordion">Does it cost me anything to join?</button>
+	<div class="panel">
+	  <p>No. This platform is completely free for both Investors and Entrepreneurs to join. They can get the contact details of each other without any cost.</p>
+	</div>
+
+	<button class="accordion">Is there an investment minimum and maximum?</button>
+	<div class="panel">
+	  <p>No. But it depends on the capital required by the Entrepreneurs.</p>
+	</div>
+
+	<button class="accordion">How do I submit a pitch?</button>
+	<div class="panel">
+	  <p>The first step is to register as an entrepreneur. Then you’ll be able to submit a pitch using our simple online form.</p>
+	</div>
+
+	<button class="accordion">How long will it take to raise money?</button>
+	<div class="panel">
+	  <p>Every situation is unique, so the time it takes to complete a financing can vary widely.</p>
+	</div>
+
+	<button class="accordion">What about confidentiality? Who sees my information and how do I protect it?</button>
+	<div class="panel">
+	  <p>In order to allow InvEnt’s investor community to make investment decisions, you will be required to share some information about your company. However, you choose what summary information is shared with our entire investor community to gauge initial interest. If you’re worried about confidentiality we'd advise you to write enough to get the investors interested in your project without revealing any sensitive information. Once you start discussions with an investor, you may want to ask them to sign a non-disclosure agreement (NDA) before you release more information.</p>
+	</div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+{% endblock %}

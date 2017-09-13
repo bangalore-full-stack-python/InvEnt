@@ -1,0 +1,19 @@
+{% extends "structure.html" %}
+{% block header %}
+<div class="container">
+    <p class="navbar-text navbar-right" id="welcome">Welcome <b>{{ firstname }}</b> <a href="/" id="log">Logout</a></p>
+</div>
+{% endblock %}
+
+{% block invent %}
+<div class="inv-page">
+	<h2 class="dash">{{ firstname }}'s Dashboard</h2><br>
+	<div>
+		<h4 class="dash-detail">Name<hr><p class="dash-detail-info">{{ firstname }} {{ lastname }}</p></h4><br>
+		<h4 class="dash-detail">Heading<hr><p class="dash-detail-info">{{ heading }}</p></h4><br>
+		<h4 class="dash-detail">Project Description<hr><p class="dash-detail-info">{{ project_desc }}</p></h4><br>
+		<h4 class="dash-detail">Website Address<hr><p class="dash-detail-info">{{ web_link }}</p></h4><br>
+		<h4 class="dash-detail">Pitch Message<hr><p class="dash-detail-info">{{ pitch_msg }}</p></h4>
+	</div>
+</div>
+{% endblock %}
